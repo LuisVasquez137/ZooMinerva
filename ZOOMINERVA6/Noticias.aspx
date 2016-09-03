@@ -3,7 +3,7 @@
     <h2><%: Title %>.<asp:Image ID="Image2" runat="server" />
 </h2>
     <p style="background-image: url('images/madera3.jpg'); height: 30px;" class="text-center">
-        <span style="font-size: larger"><strong>NOTICIAS 2</strong></span><table class="nav-justified" style="background-image: url('images/madera3.jpg')">
+        <span style="font-size: larger"><strong>NActualice las noticias</strong></span><table class="nav-justified" style="background-image: url('images/madera3.jpg')">
             <tr>
                 <td style="width: 275px">&nbsp;</td>
                 <td>&nbsp;</td>
