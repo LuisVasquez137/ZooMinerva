@@ -4,3 +4,9 @@ c:\users\dell\documents\visual studio 2015\Projects\SistemaZoologicoMinerva\DAL\
 c:\users\dell\documents\visual studio 2015\Projects\SistemaZoologicoMinerva\DAL\obj\Debug\DAL.pdb
 C:\Users\DELL\Documents\Visual Studio 2015\Projects\SistemaZoologicoMinerva\DAL\bin\Debug\DAL.dll.config
 C:\Users\DELL\Documents\Visual Studio 2015\Projects\SistemaZoologicoMinerva\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Source\Repos\ZooMinerva\DAL\bin\Debug\DAL.dll.config
+C:\Users\DELL\Source\Repos\ZooMinerva\DAL\bin\Debug\DAL.dll
+C:\Users\DELL\Source\Repos\ZooMinerva\DAL\bin\Debug\DAL.pdb
+C:\Users\DELL\Source\Repos\ZooMinerva\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Source\Repos\ZooMinerva\DAL\obj\Debug\DAL.dll
+C:\Users\DELL\Source\Repos\ZooMinerva\DAL\obj\Debug\DAL.pdb

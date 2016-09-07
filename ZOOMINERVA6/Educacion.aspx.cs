@@ -18,9 +18,8 @@ namespace ZOOMINERVA6
             ClassZoologico logica = new ClassZoologico();
             DataTable tblRespuesta;
             tblRespuesta = logica.lista_paquetes();
-            GridView1.DataSource = tblRespuesta;
-            GridView1.DataBind();
-
+            Repeater1.DataSource = tblRespuesta;
+            Repeater1.DataBind();
         }
     }
 }

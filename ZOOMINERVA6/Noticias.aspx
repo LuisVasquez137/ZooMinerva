@@ -2,79 +2,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.<asp:Image ID="Image2" runat="server" />
 </h2>
-    <p style="background-image: url('images/madera3.jpg'); height: 30px;" class="text-center">
-        <span style="font-size: larger"><strong>NActualice las noticias</strong></span><table class="nav-justified" style="background-image: url('images/madera3.jpg')">
-            <tr>
-                <td style="width: 275px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="width: 275px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="text-center"><strong><span style="font-size: larger">NOTICAS ZOO:</span></strong></td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="width: 275px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="width: 275px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="width: 275px; height: 22px"></td>
-                <td style="height: 22px"></td>
-                <td style="height: 22px"></td>
-                <td style="height: 22px"></td>
-                <td style="height: 22px"></td>
-            </tr>
-            <tr>
-                <td style="width: 275px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="width: 275px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="width: 275px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="width: 275px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="width: 275px">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
+    <p style="height: 30px;" class="text-left">
+        <span style="font-size: larger"><strong>.</strong></span></p>
+    
+    <style type="text/css">
+  .size1of3 { float: left; width: 33%; }
+        </style>
 
-    </p>
+    <asp:Repeater ID="Repeater1" runat="server" >
+        <ItemTemplate>
+            <div class="size1of3">
+<table>
+    <tr><th style="background-color: #C0C0C0">IMAGEN  <%#Eval("Imagen") %> </th></tr>
+    <tr><td><strong> Noticia:           </pre> </strong></td><td><%#Eval("Titulo_noticia") %> </td></tr>
+    <tr><td><strong>Descripción </strong></td><td><%#Eval("Descripcion") %> </td></tr>
+    <tr><td><strong>¿Cuando será?</strong></td><td><%#Eval("fecha") %> </td></tr>
+    
+   
+</table>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+
 </asp:Content>

@@ -230,6 +230,7 @@
     <Content Include="images\Arreglada9.jpg" />
     <Content Include="images\cabras.jpg" />
     <Content Include="images\leon2.jpeg" />
+    <Content Include="images\leopardo.jpg" />
     <Content Include="images\login.jpg" />
     <Content Include="images\loros.jpg" />
     <Content Include="images\madera3.jpg" />
@@ -241,6 +242,7 @@
     <Content Include="images\tucan3.jpg" />
     <Content Include="images\zoo.jpg" />
     <Content Include="images\zoologico.png" />
+    <Content Include="IngresarNoticias.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Nacimientos.aspx" />
     <Content Include="Noticias.aspx" />
@@ -478,6 +480,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarNoticias.aspx.cs">
+      <DependentUpon>IngresarNoticias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresarNoticias.aspx.designer.cs">
+      <DependentUpon>IngresarNoticias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

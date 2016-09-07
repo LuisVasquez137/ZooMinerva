@@ -61,6 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetEmpleado.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetNoticias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetNoticias.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetZoologico.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +112,17 @@
     </None>
     <None Include="DataSetEmpleado.xss">
       <DependentUpon>DataSetEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetNoticias.xsc">
+      <DependentUpon>DataSetNoticias.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetNoticias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetNoticias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetNoticias.xss">
+      <DependentUpon>DataSetNoticias.xsd</DependentUpon>
     </None>
     <None Include="DataSetZoologico.xsc">
       <DependentUpon>DataSetZoologico.xsd</DependentUpon>
