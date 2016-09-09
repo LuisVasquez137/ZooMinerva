@@ -21,5 +21,10 @@ namespace ZOOMINERVA6
             Repeater1.DataSource = tblRespuesta;
             Repeater1.DataBind();
         }
+
+        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
     }
 }

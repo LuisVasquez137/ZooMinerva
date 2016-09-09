@@ -30,6 +30,8 @@ namespace DAL {
         
         private sp_listadoPaquetesDataTable tablesp_listadoPaquetes;
         
+        private Porc_ListaVisitasDataTable tablePorc_ListaVisitas;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -66,6 +68,9 @@ namespace DAL {
                 }
                 if ((ds.Tables["sp_listadoPaquetes"] != null)) {
                     base.Tables.Add(new sp_listadoPaquetesDataTable(ds.Tables["sp_listadoPaquetes"]));
+                }
+                if ((ds.Tables["Porc_ListaVisitas"] != null)) {
+                    base.Tables.Add(new Porc_ListaVisitasDataTable(ds.Tables["Porc_ListaVisitas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -112,6 +117,16 @@ namespace DAL {
         public sp_listadoPaquetesDataTable sp_listadoPaquetes {
             get {
                 return this.tablesp_listadoPaquetes;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Porc_ListaVisitasDataTable Porc_ListaVisitas {
+            get {
+                return this.tablePorc_ListaVisitas;
             }
         }
         
@@ -191,6 +206,9 @@ namespace DAL {
                 if ((ds.Tables["sp_listadoPaquetes"] != null)) {
                     base.Tables.Add(new sp_listadoPaquetesDataTable(ds.Tables["sp_listadoPaquetes"]));
                 }
+                if ((ds.Tables["Porc_ListaVisitas"] != null)) {
+                    base.Tables.Add(new Porc_ListaVisitasDataTable(ds.Tables["Porc_ListaVisitas"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -242,6 +260,12 @@ namespace DAL {
                     this.tablesp_listadoPaquetes.InitVars();
                 }
             }
+            this.tablePorc_ListaVisitas = ((Porc_ListaVisitasDataTable)(base.Tables["Porc_ListaVisitas"]));
+            if ((initTable == true)) {
+                if ((this.tablePorc_ListaVisitas != null)) {
+                    this.tablePorc_ListaVisitas.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -258,6 +282,8 @@ namespace DAL {
             base.Tables.Add(this.tableEl_zoo1);
             this.tablesp_listadoPaquetes = new sp_listadoPaquetesDataTable();
             base.Tables.Add(this.tablesp_listadoPaquetes);
+            this.tablePorc_ListaVisitas = new Porc_ListaVisitasDataTable();
+            base.Tables.Add(this.tablePorc_ListaVisitas);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -275,6 +301,12 @@ namespace DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializesp_listadoPaquetes() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializePorc_ListaVisitas() {
             return false;
         }
         
@@ -341,6 +373,9 @@ namespace DAL {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void sp_listadoPaquetesRowChangeEventHandler(object sender, sp_listadoPaquetesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Porc_ListaVisitasRowChangeEventHandler(object sender, Porc_ListaVisitasRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1458,6 +1493,390 @@ namespace DAL {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Porc_ListaVisitasDataTable : global::System.Data.TypedTableBase<Porc_ListaVisitasRow> {
+            
+            private global::System.Data.DataColumn columnFecha_visita;
+            
+            private global::System.Data.DataColumn columnHora_ingreso;
+            
+            private global::System.Data.DataColumn columnEstablecimiento;
+            
+            private global::System.Data.DataColumn columnDireccion_establecimiento;
+            
+            private global::System.Data.DataColumn columnNoAlumnos;
+            
+            private global::System.Data.DataColumn columnGrado;
+            
+            private global::System.Data.DataColumn columnDonacion;
+            
+            private global::System.Data.DataColumn columnTelefono_establecimiento;
+            
+            private global::System.Data.DataColumn columnCoentarios;
+            
+            private global::System.Data.DataColumn columnNombre_paquete;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Porc_ListaVisitasDataTable() {
+                this.TableName = "Porc_ListaVisitas";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Porc_ListaVisitasDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Porc_ListaVisitasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Fecha_visitaColumn {
+                get {
+                    return this.columnFecha_visita;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Hora_ingresoColumn {
+                get {
+                    return this.columnHora_ingreso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EstablecimientoColumn {
+                get {
+                    return this.columnEstablecimiento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Direccion_establecimientoColumn {
+                get {
+                    return this.columnDireccion_establecimiento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NoAlumnosColumn {
+                get {
+                    return this.columnNoAlumnos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GradoColumn {
+                get {
+                    return this.columnGrado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DonacionColumn {
+                get {
+                    return this.columnDonacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Telefono_establecimientoColumn {
+                get {
+                    return this.columnTelefono_establecimiento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CoentariosColumn {
+                get {
+                    return this.columnCoentarios;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Nombre_paqueteColumn {
+                get {
+                    return this.columnNombre_paquete;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Porc_ListaVisitasRow this[int index] {
+                get {
+                    return ((Porc_ListaVisitasRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Porc_ListaVisitasRowChangeEventHandler Porc_ListaVisitasRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Porc_ListaVisitasRowChangeEventHandler Porc_ListaVisitasRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Porc_ListaVisitasRowChangeEventHandler Porc_ListaVisitasRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Porc_ListaVisitasRowChangeEventHandler Porc_ListaVisitasRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddPorc_ListaVisitasRow(Porc_ListaVisitasRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Porc_ListaVisitasRow AddPorc_ListaVisitasRow(System.DateTime Fecha_visita, string Hora_ingreso, string Establecimiento, string Direccion_establecimiento, int NoAlumnos, string Grado, decimal Donacion, string Telefono_establecimiento, string Coentarios, string Nombre_paquete) {
+                Porc_ListaVisitasRow rowPorc_ListaVisitasRow = ((Porc_ListaVisitasRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Fecha_visita,
+                        Hora_ingreso,
+                        Establecimiento,
+                        Direccion_establecimiento,
+                        NoAlumnos,
+                        Grado,
+                        Donacion,
+                        Telefono_establecimiento,
+                        Coentarios,
+                        Nombre_paquete};
+                rowPorc_ListaVisitasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPorc_ListaVisitasRow);
+                return rowPorc_ListaVisitasRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Porc_ListaVisitasDataTable cln = ((Porc_ListaVisitasDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Porc_ListaVisitasDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnFecha_visita = base.Columns["Fecha_visita"];
+                this.columnHora_ingreso = base.Columns["Hora_ingreso"];
+                this.columnEstablecimiento = base.Columns["Establecimiento"];
+                this.columnDireccion_establecimiento = base.Columns["Direccion_establecimiento"];
+                this.columnNoAlumnos = base.Columns["NoAlumnos"];
+                this.columnGrado = base.Columns["Grado"];
+                this.columnDonacion = base.Columns["Donacion"];
+                this.columnTelefono_establecimiento = base.Columns["Telefono_establecimiento"];
+                this.columnCoentarios = base.Columns["Coentarios"];
+                this.columnNombre_paquete = base.Columns["Nombre_paquete"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnFecha_visita = new global::System.Data.DataColumn("Fecha_visita", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_visita);
+                this.columnHora_ingreso = new global::System.Data.DataColumn("Hora_ingreso", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHora_ingreso);
+                this.columnEstablecimiento = new global::System.Data.DataColumn("Establecimiento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstablecimiento);
+                this.columnDireccion_establecimiento = new global::System.Data.DataColumn("Direccion_establecimiento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDireccion_establecimiento);
+                this.columnNoAlumnos = new global::System.Data.DataColumn("NoAlumnos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNoAlumnos);
+                this.columnGrado = new global::System.Data.DataColumn("Grado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrado);
+                this.columnDonacion = new global::System.Data.DataColumn("Donacion", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDonacion);
+                this.columnTelefono_establecimiento = new global::System.Data.DataColumn("Telefono_establecimiento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefono_establecimiento);
+                this.columnCoentarios = new global::System.Data.DataColumn("Coentarios", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCoentarios);
+                this.columnNombre_paquete = new global::System.Data.DataColumn("Nombre_paquete", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre_paquete);
+                this.columnFecha_visita.AllowDBNull = false;
+                this.columnHora_ingreso.MaxLength = 100;
+                this.columnEstablecimiento.AllowDBNull = false;
+                this.columnEstablecimiento.MaxLength = 400;
+                this.columnDireccion_establecimiento.MaxLength = 500;
+                this.columnNoAlumnos.AllowDBNull = false;
+                this.columnGrado.MaxLength = 200;
+                this.columnTelefono_establecimiento.MaxLength = 100;
+                this.columnCoentarios.MaxLength = 1000;
+                this.columnNombre_paquete.AllowDBNull = false;
+                this.columnNombre_paquete.MaxLength = 200;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Porc_ListaVisitasRow NewPorc_ListaVisitasRow() {
+                return ((Porc_ListaVisitasRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Porc_ListaVisitasRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Porc_ListaVisitasRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Porc_ListaVisitasRowChanged != null)) {
+                    this.Porc_ListaVisitasRowChanged(this, new Porc_ListaVisitasRowChangeEvent(((Porc_ListaVisitasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Porc_ListaVisitasRowChanging != null)) {
+                    this.Porc_ListaVisitasRowChanging(this, new Porc_ListaVisitasRowChangeEvent(((Porc_ListaVisitasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Porc_ListaVisitasRowDeleted != null)) {
+                    this.Porc_ListaVisitasRowDeleted(this, new Porc_ListaVisitasRowChangeEvent(((Porc_ListaVisitasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Porc_ListaVisitasRowDeleting != null)) {
+                    this.Porc_ListaVisitasRowDeleting(this, new Porc_ListaVisitasRowChangeEvent(((Porc_ListaVisitasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovePorc_ListaVisitasRow(Porc_ListaVisitasRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSetZoologico ds = new DataSetZoologico();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Porc_ListaVisitasDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class El_zooRow : global::System.Data.DataRow {
@@ -1835,6 +2254,235 @@ namespace DAL {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Porc_ListaVisitasRow : global::System.Data.DataRow {
+            
+            private Porc_ListaVisitasDataTable tablePorc_ListaVisitas;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Porc_ListaVisitasRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePorc_ListaVisitas = ((Porc_ListaVisitasDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Fecha_visita {
+                get {
+                    return ((global::System.DateTime)(this[this.tablePorc_ListaVisitas.Fecha_visitaColumn]));
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.Fecha_visitaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Hora_ingreso {
+                get {
+                    try {
+                        return ((string)(this[this.tablePorc_ListaVisitas.Hora_ingresoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Hora_ingreso\' de la tabla \'Porc_ListaVisitas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.Hora_ingresoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Establecimiento {
+                get {
+                    return ((string)(this[this.tablePorc_ListaVisitas.EstablecimientoColumn]));
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.EstablecimientoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Direccion_establecimiento {
+                get {
+                    try {
+                        return ((string)(this[this.tablePorc_ListaVisitas.Direccion_establecimientoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Direccion_establecimiento\' de la tabla \'Porc_ListaVisitas" +
+                                "\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.Direccion_establecimientoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int NoAlumnos {
+                get {
+                    return ((int)(this[this.tablePorc_ListaVisitas.NoAlumnosColumn]));
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.NoAlumnosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Grado {
+                get {
+                    try {
+                        return ((string)(this[this.tablePorc_ListaVisitas.GradoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Grado\' de la tabla \'Porc_ListaVisitas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.GradoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Donacion {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablePorc_ListaVisitas.DonacionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Donacion\' de la tabla \'Porc_ListaVisitas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.DonacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Telefono_establecimiento {
+                get {
+                    try {
+                        return ((string)(this[this.tablePorc_ListaVisitas.Telefono_establecimientoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Telefono_establecimiento\' de la tabla \'Porc_ListaVisitas\'" +
+                                " es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.Telefono_establecimientoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Coentarios {
+                get {
+                    try {
+                        return ((string)(this[this.tablePorc_ListaVisitas.CoentariosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Coentarios\' de la tabla \'Porc_ListaVisitas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.CoentariosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nombre_paquete {
+                get {
+                    return ((string)(this[this.tablePorc_ListaVisitas.Nombre_paqueteColumn]));
+                }
+                set {
+                    this[this.tablePorc_ListaVisitas.Nombre_paqueteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHora_ingresoNull() {
+                return this.IsNull(this.tablePorc_ListaVisitas.Hora_ingresoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHora_ingresoNull() {
+                this[this.tablePorc_ListaVisitas.Hora_ingresoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDireccion_establecimientoNull() {
+                return this.IsNull(this.tablePorc_ListaVisitas.Direccion_establecimientoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDireccion_establecimientoNull() {
+                this[this.tablePorc_ListaVisitas.Direccion_establecimientoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGradoNull() {
+                return this.IsNull(this.tablePorc_ListaVisitas.GradoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGradoNull() {
+                this[this.tablePorc_ListaVisitas.GradoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDonacionNull() {
+                return this.IsNull(this.tablePorc_ListaVisitas.DonacionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDonacionNull() {
+                this[this.tablePorc_ListaVisitas.DonacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTelefono_establecimientoNull() {
+                return this.IsNull(this.tablePorc_ListaVisitas.Telefono_establecimientoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTelefono_establecimientoNull() {
+                this[this.tablePorc_ListaVisitas.Telefono_establecimientoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCoentariosNull() {
+                return this.IsNull(this.tablePorc_ListaVisitas.CoentariosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCoentariosNull() {
+                this[this.tablePorc_ListaVisitas.CoentariosColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1922,6 +2570,40 @@ namespace DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public sp_listadoPaquetesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Porc_ListaVisitasRowChangeEvent : global::System.EventArgs {
+            
+            private Porc_ListaVisitasRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Porc_ListaVisitasRowChangeEvent(Porc_ListaVisitasRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Porc_ListaVisitasRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3066,6 +3748,170 @@ SELECT TOP (1) Id_zoo, Zoo, Mision, Vision, Direccion, Telefono, facebook, mapa,
                 }
             }
             return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Porc_ListaVisitasTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Porc_ListaVisitasTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Porc_ListaVisitas";
+            tableMapping.ColumnMappings.Add("Fecha_visita", "Fecha_visita");
+            tableMapping.ColumnMappings.Add("Hora_ingreso", "Hora_ingreso");
+            tableMapping.ColumnMappings.Add("Establecimiento", "Establecimiento");
+            tableMapping.ColumnMappings.Add("Direccion_establecimiento", "Direccion_establecimiento");
+            tableMapping.ColumnMappings.Add("NoAlumnos", "NoAlumnos");
+            tableMapping.ColumnMappings.Add("Grado", "Grado");
+            tableMapping.ColumnMappings.Add("Donacion", "Donacion");
+            tableMapping.ColumnMappings.Add("Telefono_establecimiento", "Telefono_establecimiento");
+            tableMapping.ColumnMappings.Add("Coentarios", "Coentarios");
+            tableMapping.ColumnMappings.Add("Nombre_paquete", "Nombre_paquete");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::DAL.Properties.Settings.Default.BDZoologicoMinervaConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.Porc_ListaVisitas";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSetZoologico.Porc_ListaVisitasDataTable ListadoVisitas() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetZoologico.Porc_ListaVisitasDataTable dataTable = new DataSetZoologico.Porc_ListaVisitasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     

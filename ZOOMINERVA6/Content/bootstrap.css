@@ -2218,6 +2218,15 @@ fieldset[disabled] .btn-danger.active {
   border-color: #4cae4c;
 }
 
+.panel-info {
+  border-color: #bce8f1;
+}
+.panel-info > .panel-heading {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
 .btn-success:hover,
 .btn-success:focus,
 .btn-success:active,

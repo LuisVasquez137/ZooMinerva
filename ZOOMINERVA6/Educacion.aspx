@@ -1,48 +1,62 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Educacion.aspx.cs" Inherits="ZOOMINERVA6.Educacion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.<asp:Image ID="Image2" runat="server" />
-    </h2>
+   
      <style type="text/css">
 
            .marco {
-               border-left: 6px solid green;
-    background-color: lightgrey;
+               background-image: url('images/beige2.jpg');
+               border-radius: 20px;
+               padding: 23px;
+               margin: 23px;
+               width: 70%;
+               
+    
     
            }
               </style>
 
+     <style type="text/css">
+
+           .fondo {
+               background-image: url('images/madera4.jpg');
+           }
+             </style>
+
             <style type="text/css">
-  .size1of3 { float:left; width: 50%; }
-                .auto-style1 {
-                    background-color: #006600;
+  .size1of3 { float:left; width: 50%; 
+              
+  }
+
+                .auto-style2 {
+                    font-size: xx-large;
+                }
+                .auto-style3 {
+                    height: 22px;
+                }
+                .auto-style5 {
+                    text-align: center;
+                    font-size: large;
                 }
         </style>
+     <h2><%: Title %>.<asp:Image ID="Image2" runat="server" />
+    </h2>
+    <div class="fondo">
 
-
-    
-    <p>
    
-        <table class="nav-justified">
-            <tr>
-                <td class="text-center" colspan="5"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 35px"><span class="auto-style1">PAQUETES EDUCATIVOS</span></strong></td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="text-center">
-                    &nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            </table>
-<asp:Repeater ID="Repeater1" runat="server" >
+     <div class="text-center" style="background-image: url('images/beige2.jpg');">
+        <tr>
+            <td style=" background-image: url('images/beige2.jpg'); color: #003399;" class="auto-style11" colspan="4"><span  style="font-family: 'Comic Sans MS'"><span class="auto-style2">PAQUETES EDUCATIVOS</td>
+      
+                </td>
+                  </tr>
+                
+         </span>
+                
+    </div>
+  
+       
+        
+<asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand" >
         <ItemTemplate>
             <div class="size1of3">
 <table class="marco">
@@ -55,14 +69,26 @@
     <tr><td><strong>¿QUE INCLUYE?  </strong></td><td><%#Eval("Incluye") %> </td></tr>
     
 </table>
-                 <tr><td><pre style="background-color:white"> 
-
-                     
-
-             </pre></td></tr>
+               
+                
             </div>
+             
         </ItemTemplate>
     </asp:Repeater>
 
-    </p>
+
+
+   
+        &nbsp;
+               &nbsp;
+               &nbsp;
+               &nbsp;
+          &nbsp;
+               &nbsp;
+               &nbsp;
+               &nbsp;
+         
+   
+           </div>
+     </span>
 </asp:Content>

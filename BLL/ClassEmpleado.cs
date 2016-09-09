@@ -14,6 +14,7 @@ namespace BLL
         private sp_listadoEmpleadosTableAdapter listado;
         private Cargo_EmpleadoTableAdapter cargos;
         private EmpleadoTableAdapter empleado;
+        private ListaEmpleadoCodigoTableAdapter porCodigo;
 
     
     private procedimiento_verificacionTableAdapter PROC
@@ -42,6 +43,16 @@ namespace BLL
                 if (listado == null)
                     listado = new sp_listadoEmpleadosTableAdapter();
                 return listado;
+            }
+        }
+
+        private ListaEmpleadoCodigoTableAdapter PORCODIGO
+        {
+            get
+            {
+                if (porCodigo == null)
+                    porCodigo = new ListaEmpleadoCodigoTableAdapter();
+                return porCodigo;
             }
         }
 
@@ -96,6 +107,15 @@ namespace BLL
             return EMP.sp_Baja_Empleado(codi);
         }
 
+        public int Inserta_Cargos(string nomb, string desc)
+        {
+            return CARGO.InsertaCargo(nomb, desc);
+        }
+
+        public DataTable ListadoCodigo(int cod)
+        {
+            return PORCODIGO.ListadoEmpleadosPorCodigo(cod);
+        }
     }
 
 }

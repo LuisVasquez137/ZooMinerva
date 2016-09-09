@@ -70,7 +70,11 @@
                     <td>
                         &nbsp;</td>
                     <td>
-                        &nbsp;</td>
+                        <asp:DropDownList ID="DropDownList1" runat="server" Height="19px" Visible="False" Width="191px">
+                            <asp:ListItem>Empleados</asp:ListItem>
+                            <asp:ListItem>Cargos</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
                     <td style="text-align: center">
                         <asp:LinkButton ID="LinkButton16" runat="server" ForeColor="White" OnClick="LinkButton16_Click">CERRAR SESIÓN</asp:LinkButton>
                     </td>

@@ -14,9 +14,10 @@ namespace ZOOMINERVA6
         {
 
             Image2.ImageUrl = "~/images/leopardo.jpg";
+            /*
             ClassZoologico logica = new ClassZoologico();
             GridView1.DataSource = logica.lista_paquetes();
-            GridView1.DataBind();
+            GridView1.DataBind();*/
         }
 
        
@@ -29,7 +30,6 @@ namespace ZOOMINERVA6
                 i = logica.Inserta_Paquete(TextBoxNombre.Text, TextBoxTema.Text, TextBoxObjetivos.Text, Convert.ToDecimal(TextBoxDonacion.Text), TextBoxIncluye.Text);
                 if (i == 1)
                 {
-                    GridView1.DataSource = logica.lista_paquetes();
                     GridView1.DataBind();
                     Label1.Visible = true;
                     Label1.Text = "Ingresado correctamente";
@@ -50,7 +50,7 @@ namespace ZOOMINERVA6
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AgregaPaquetes.aspx");
+            Response.Redirect("Default.aspx");
         }
     }
 }
