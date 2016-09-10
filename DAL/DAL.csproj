@@ -66,6 +66,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetNoticias.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetZoologico.cs">
+      <DependentUpon>DataSetZoologico.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetZoologico.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

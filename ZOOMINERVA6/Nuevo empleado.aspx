@@ -150,6 +150,7 @@
                 <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" Height="19px" Width="167px" DataSourceID="SqlDataSource2" DataTextField="Nombre_cargo" DataValueField="Id_cargo">
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:BDZoologicoMinervaConnectionString %>" SelectCommand="SELECT * FROM [Cargo_Empleado]"></asp:SqlDataSource>
+                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -178,4 +179,5 @@
    </div>
 
         </div>
+</span>
 </asp:Content>

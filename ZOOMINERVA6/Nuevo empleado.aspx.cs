@@ -59,20 +59,20 @@ namespace ZOOMINERVA6
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-/*
-          if (!this.IsPostBack)
-            {
-                ClassEmpleado logica = new ClassEmpleado();
+            /*
+                      if (!this.IsPostBack)
+                        {
+                            ClassEmpleado logica = new ClassEmpleado();
 
-                this.DropDownList1.DataSource = logica.Lista_cargos();
-                this.DropDownList1.DataTextField = "Nombre_cargo";
-                this.DropDownList1.DataValueField = "Id_cargo";
-                this.DropDownList1.DataBind();
-               
+                            this.DropDownList1.DataSource = logica.Lista_cargos();
+                            this.DropDownList1.DataTextField = "Nombre_cargo";
+                            this.DropDownList1.DataValueField = "Id_cargo";
+                            this.DropDownList1.DataBind();
 
-            }
-          */
 
+                        }
+                      */
+            
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)

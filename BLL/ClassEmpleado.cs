@@ -14,6 +14,7 @@ namespace BLL
         private sp_listadoEmpleadosTableAdapter listado;
         private Cargo_EmpleadoTableAdapter cargos;
         private EmpleadoTableAdapter empleado;
+        private Empleado1TableAdapter empleado1;
         private ListaEmpleadoCodigoTableAdapter porCodigo;
 
     
@@ -35,6 +36,17 @@ namespace BLL
                 return empleado;
             }
         }
+
+        private Empleado1TableAdapter EMP1
+        {
+            get
+            {
+                if (empleado1 == null)
+                    empleado1 = new Empleado1TableAdapter();
+                return empleado1;
+            }
+        }
+
 
         private sp_listadoEmpleadosTableAdapter LISTADO
         {
@@ -115,6 +127,10 @@ namespace BLL
         public DataTable ListadoCodigo(int cod)
         {
             return PORCODIGO.ListadoEmpleadosPorCodigo(cod);
+        }
+        public DataTable ObtieneCodigoEmpleado(string usua, string contra)
+        {
+            return EMP1.DevuelveCodigoEmpleado(usua,contra);
         }
     }
 
