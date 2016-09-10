@@ -19,6 +19,8 @@
 
            .fondo {
                background-image: url('images/madera4.jpg');
+               background-attachment :fixed;
+             
            }
              </style>
 
@@ -71,6 +73,9 @@
 </table>
                
                 
+            </div>
+            <div>
+
             </div>
              
         </ItemTemplate>

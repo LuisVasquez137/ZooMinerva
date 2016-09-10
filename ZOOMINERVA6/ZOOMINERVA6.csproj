@@ -200,7 +200,6 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AgregaPaquetes.aspx" />
     <Content Include="Animales.aspx" />
-    <Content Include="BajaEmpleado.aspx" />
     <Content Include="CargoEmpleados.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -434,13 +433,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="BajaEmpleado.aspx.cs">
-      <DependentUpon>BajaEmpleado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BajaEmpleado.aspx.designer.cs">
-      <DependentUpon>BajaEmpleado.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CargoEmpleados.aspx.cs">
       <DependentUpon>CargoEmpleados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

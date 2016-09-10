@@ -55,34 +55,36 @@
                 
             </div>
         <br />
+        <div>
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Id_registro" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
+                <AlternatingRowStyle BackColor="White" />
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="Id_registro" HeaderText="Id_registro" InsertVisible="False" ReadOnly="True" SortExpression="Id_registro" />
+                    <asp:BoundField DataField="Fecha_visita" HeaderText="Fecha_visita" SortExpression="Fecha_visita" />
+                    <asp:BoundField DataField="Hora_ingreso" HeaderText="Hora_ingreso" SortExpression="Hora_ingreso" />
+                    <asp:BoundField DataField="Establecimiento" HeaderText="Establecimiento" SortExpression="Establecimiento" />
+                    <asp:BoundField DataField="Direccion_establecimiento" HeaderText="Direccion_establecimiento" SortExpression="Direccion_establecimiento" />
+                    <asp:BoundField DataField="NoAlumnos" HeaderText="NoAlumnos" SortExpression="NoAlumnos" />
+                    <asp:BoundField DataField="Grado" HeaderText="Grado" SortExpression="Grado" />
+                    <asp:BoundField DataField="Donacion" HeaderText="Donacion" SortExpression="Donacion" />
+                    <asp:BoundField DataField="Telefono_establecimiento" HeaderText="Telefono_establecimiento" SortExpression="Telefono_establecimiento" />
+                    <asp:BoundField DataField="Coentarios" HeaderText="Coentarios" SortExpression="Coentarios" />
+                    <asp:BoundField DataField="Nombre_paquete" HeaderText="Nombre_paquete" SortExpression="Nombre_paquete" />
+                </Columns>
+                <FooterStyle BackColor="#CCCC99" />
+                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                <RowStyle BackColor="#F7F7DE" />
+                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                <SortedAscendingHeaderStyle BackColor="#848384" />
+                <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                <SortedDescendingHeaderStyle BackColor="#575357" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BDZoologicoMinervaConnectionString %>" SelectCommand="Porc_ListaVisitas" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
 
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" DataKeyNames="Id_registro" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-            <AlternatingRowStyle BackColor="White" />
-            <Columns>
-                <asp:CommandField ShowSelectButton="True" />
-                <asp:BoundField DataField="Id_registro" HeaderText="Id_registro" SortExpression="Id_registro" InsertVisible="False" ReadOnly="True" />
-                <asp:BoundField DataField="Fecha_visita" HeaderText="Fecha_visita" SortExpression="Fecha_visita" />
-                <asp:BoundField DataField="Hora_ingreso" HeaderText="Hora_ingreso" SortExpression="Hora_ingreso" />
-                <asp:BoundField DataField="Establecimiento" HeaderText="Establecimiento" SortExpression="Establecimiento" />
-                <asp:BoundField DataField="Direccion_establecimiento" HeaderText="Direccion_establecimiento" SortExpression="Direccion_establecimiento" />
-                <asp:BoundField DataField="NoAlumnos" HeaderText="NoAlumnos" SortExpression="NoAlumnos" />
-                <asp:BoundField DataField="Grado" HeaderText="Grado" SortExpression="Grado" />
-                <asp:BoundField DataField="Donacion" HeaderText="Donacion" SortExpression="Donacion" />
-                <asp:BoundField DataField="Telefono_establecimiento" HeaderText="Telefono_establecimiento" SortExpression="Telefono_establecimiento" />
-                <asp:BoundField DataField="Coentarios" HeaderText="Coentarios" SortExpression="Coentarios" />
-                <asp:BoundField DataField="Nombre_paquete" HeaderText="Nombre_paquete" SortExpression="Nombre_paquete" />
-            </Columns>
-            <FooterStyle BackColor="#CCCC99" />
-            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-            <RowStyle BackColor="#F7F7DE" />
-            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-            <SortedAscendingCellStyle BackColor="#FBFBF2" />
-            <SortedAscendingHeaderStyle BackColor="#848384" />
-            <SortedDescendingCellStyle BackColor="#EAEAD3" />
-            <SortedDescendingHeaderStyle BackColor="#575357" />
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BDZoologicoMinervaConnectionString %>" SelectCommand="Porc_ListaVisitas" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        </div>
 
         <div class="marco2">
 

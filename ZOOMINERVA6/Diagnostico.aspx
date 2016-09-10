@@ -1,9 +1,45 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Diagnostico.aspx.cs" Inherits="ZOOMINERVA6.Diagnostico" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+     <style type="text/css">
+
+           .marco2 {
+             
+               border-radius: 20px;
+               
+               margin: 50px;
+               width:auto;
+               font-size: small; 
+              
+               background-image: url('images/beige2.jpg');
+                color: #003399;
+                border-bottom:20px;
+    
+    
+           }
+
+           .fondo {
+               background-image: url('images/madera4.jpg');
+               background-attachment :fixed;
+             
+               
+           }
+              </style>
+    <div class="fondo">
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+   
+    
      <h2 class="text-center"><%: Title %>.</h2>
     <asp:Image ID="Image1" runat="server" />
-    <p class="text-center" style="background-image: url('images/madera3.jpg'); font-size: larger;"><strong><span style="font-size: x-large">D</span></strong><span style="font-weight: bold"><span style="font-size: x-large">IAGNOSTICO DEL PACIENTE:</span></span><strong><table align="center" class="nav-justified" style="background-image: url('images/madera3.jpg'); font-size: larger;">
-        <tr>
+        <div class="marco2" >
+    <p class="text-center"><strong><span style="font-size: x-large">D</span></strong><span style="font-weight: bold"><span style="font-size: x-large">IAGNOSTICO DEL PACIENTE:</span></span><strong><table align="center" class="nav-justified" font-size: larger;">
+       
+    
+
+           
+        
+      <tr>
             <td style="width: 205px; height: 31px;"></td>
             <td class="text-center" style="width: 307px; height: 31px;">INGRESE CODIGO DEL ANIMAL</td>
             <td style="height: 31px"></td>
@@ -11,8 +47,7 @@
                 <asp:TextBox ID="TextBoxCodigoAnimal" runat="server"></asp:TextBox>
             </td>
             <td style="height: 31px">
-                <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Button" />
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td style="width: 205px">&nbsp;</td>
@@ -20,13 +55,20 @@
             <td>&nbsp;</td>
             <td>historial:</td>
             <td>
-                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="text-center" style="height: 22px; width: 205px;">Fecha del diagnostico:</td>
             <td style="height: 22px; width: 307px;" class="text-left">
-                <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                <asp:Calendar ID="Calendar1" runat="server" BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" ShowGridLines="True" Width="220px" style="cursor:pointer">
+                    <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
+                    <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
+                    <OtherMonthDayStyle ForeColor="#CC9966" />
+                    <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
+                    <SelectorStyle BackColor="#FFCC66" />
+                    <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" ForeColor="#FFFFCC" />
+                    <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
+                </asp:Calendar>
             </td>
             <td style="height: 22px">&nbsp;</td>
             <td style="height: 22px">Motivo de la consulta:</td>
@@ -321,7 +363,7 @@
         </tr>
         <tr>
             <td class="text-center" colspan="5">
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label1" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -331,6 +373,15 @@
             <td class="text-center" colspan="5">&nbsp;</td>
         </tr>
         </table>
+       
      </p>
+            </div>
      </strong>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+     </div>
+    <div class="fondo">
+
+    </div>
+ 
 </asp:Content>

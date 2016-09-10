@@ -44,25 +44,7 @@ namespace ZOOMINERVA6
 
     }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //PK = Convert.ToInt32(GridView1.SelectedRow.Cells[1].Text);
-           
-
-
-            GridViewRow row = GridView1.SelectedRow;
-
-            PK =Convert.ToInt32( row.Cells[1].Text);
-            Calendar1.SelectedDate = Convert.ToDateTime(row.Cells[2].Text);
-            TextBoxHora.Text = row.Cells[3].Text;
-            TextBoxEstablecimiento.Text = row.Cells[4].Text;
-            TextBoxDireccion.Text = row.Cells[5].Text;
-            TextBoxAlumnos.Text = row.Cells[6].Text;
-            TextBoxGrado.Text = row.Cells[7].Text;
-            TextBoxTelefono.Text = row.Cells[9].Text;
-            TextBoxComentarios.Text = row.Cells[10].Text;
-
-        }
+     
 
         protected void ButtonGuardar_Click(object sender, EventArgs e)
         {
@@ -117,6 +99,24 @@ namespace ZOOMINERVA6
             TextBoxHora.Text = "";
             TextBoxTelefono.Text = "";
             TextBoxGrado.Text="";
+        }
+
+        protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
+            GridView1.DataBind();
+
+            GridViewRow row = GridView1.SelectedRow;
+
+            PK = Convert.ToInt32(row.Cells[1].Text);
+            Calendar1.SelectedDate = Convert.ToDateTime(row.Cells[2].Text);
+            TextBoxHora.Text = row.Cells[3].Text;
+           
+            TextBoxDireccion.Text = row.Cells[5].Text;
+            TextBoxAlumnos.Text = row.Cells[6].Text;
+            TextBoxGrado.Text = row.Cells[7].Text;
+            TextBoxTelefono.Text = row.Cells[9].Text;
+            TextBoxComentarios.Text = row.Cells[10].Text;
         }
     }
 }
