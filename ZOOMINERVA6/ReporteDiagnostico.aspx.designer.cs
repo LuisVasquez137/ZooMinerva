@@ -382,6 +382,15 @@ namespace ZOOMINERVA6 {
         protected global::System.Web.UI.WebControls.Button ButtonGuardar;
         
         /// <summary>
+        /// Control BotonEditar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BotonEditar;
+        
+        /// <summary>
         /// Control Button3.
         /// </summary>
         /// <remarks>

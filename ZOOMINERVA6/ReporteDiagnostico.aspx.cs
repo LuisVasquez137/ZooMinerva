@@ -107,5 +107,37 @@ namespace ZOOMINERVA6
             }
         }
 
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = GridView1.SelectedRow;
+
+            TextBoxMotivo.Text = row.Cells[3].Text;
+            TextBoxPeso.Text = row.Cells[4].Text;
+            TextBoxTemperatura.Text = row.Cells[5].Text;
+            TextBoxCardiaca.Text = row.Cells[6].Text;
+            TextBoxRespiratoria.Text = row.Cells[7].Text;
+            TextBoxTllc.Text = row.Cells[8].Text;
+            TextBoxMucosas.Text = row.Cells[9].Text;
+
+            TextBoxTungencia.Text = row.Cells[10].Text;
+            TextBoxPulso.Text = row.Cells[11].Text;
+            TextBoxAnamnesis.Text = row.Cells[12].Text;
+            TextBoxEnfermedades.Text = row.Cells[13].Text;
+            TextBoxActitud.Text = row.Cells[14].Text;
+            TextBoxCondicionCorporal.Text = row.Cells[15].Text;
+            TextBoxLocomocion.Text = row.Cells[16].Text;
+            TextBoxMusculoEsqueletico.Text = row.Cells[17].Text;
+            TextBoxNervioso.Text = row.Cells[18].Text;
+            TextBoxCardiobascular.Text = row.Cells[19].Text;
+            TextBoxDigestivo.Text = row.Cells[20].Text;
+            TextBoxRespiratorio.Text = row.Cells[21].Text;
+            TextBoxGeniouriano.Text = row.Cells[22].Text;
+            TextBoxProblemasEncontrados.Text = row.Cells[23].Text;
+            TextBoxDiagnosticoPresuntivo.Text = row.Cells[24].Text;
+            TextBoxResultados.Text = row.Cells[25].Text;
+            TextBoxProgreso.Text = row.Cells[26].Text;
+            
+            Calendar1.SelectedDate = Convert.ToDateTime(row.Cells[2].Text);
+        }
     }
 }

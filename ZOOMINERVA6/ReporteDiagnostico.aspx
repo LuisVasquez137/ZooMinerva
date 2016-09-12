@@ -98,13 +98,12 @@
             </tr>
             <tr>
                 <td class="text-center" style="height: 22px" colspan="5">
-                    <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id_historial,Id_diagnostico,Id_animal,Id_historial1" DataSourceID="SqlDataSource1">
+                    <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id_historial" DataSourceID="SqlDataSource1" HorizontalAlign="Left" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CommandField ShowSelectButton="True" />
                             <asp:BoundField DataField="Id_historial" HeaderText="Id_historial" InsertVisible="False" ReadOnly="True" SortExpression="Id_historial" />
                             <asp:BoundField DataField="Fecha_diagnostico" HeaderText="Fecha_diagnostico" SortExpression="Fecha_diagnostico" />
-                            <asp:BoundField DataField="Id_empleado" HeaderText="Id_empleado" SortExpression="Id_empleado" />
                             <asp:BoundField DataField="Motivo_consulta" HeaderText="Motivo_consulta" SortExpression="Motivo_consulta" />
                             <asp:BoundField DataField="Peso" HeaderText="Peso" SortExpression="Peso" />
                             <asp:BoundField DataField="Temperatura" HeaderText="Temperatura" SortExpression="Temperatura" />
@@ -134,9 +133,6 @@
                             <asp:BoundField DataField="Diagnostico_definitivo" HeaderText="Diagnostico_definitivo" SortExpression="Diagnostico_definitivo" />
                             <asp:BoundField DataField="Resultados" HeaderText="Resultados" SortExpression="Resultados" />
                             <asp:BoundField DataField="Progreso_animal" HeaderText="Progreso_animal" SortExpression="Progreso_animal" />
-                            <asp:BoundField DataField="Id_diagnostico" HeaderText="Id_diagnostico" InsertVisible="False" ReadOnly="True" SortExpression="Id_diagnostico" />
-                            <asp:BoundField DataField="Id_animal" HeaderText="Id_animal" ReadOnly="True" SortExpression="Id_animal" />
-                            <asp:BoundField DataField="Id_historial1" HeaderText="Id_historial1" ReadOnly="True" SortExpression="Id_historial1" />
                         </Columns>
                         <FooterStyle BackColor="#CCCC99" />
                         <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -163,7 +159,7 @@
 
             
      <h2 class="text-center"><%: Title %>.</h2>
-    
+          
         <div class="marco2" >
     <p class="text-center"><strong><span style="font-size: x-large">D</span></strong><span style="font-weight: bold"><span style="font-size: x-large">IAGNOSTICO DEL PACIENTE:</span></span><strong><table align="center" class="nav-justified" font-size: larger;">
        
@@ -173,7 +169,7 @@
         
       <tr>
             <td style="width: 205px; height: 31px;"></td>
-            <td class="text-center" style="width: 307px; height: 31px;">INGRESE CODIGO DEL ANIMAL</td>
+            <td class="text-center" style="width: 307px; height: 31px;">&nbsp;</td>
             <td style="height: 31px"></td>
             <td style="height: 31px">
                 &nbsp;</td>
@@ -484,7 +480,9 @@
                 <asp:Button ID="ButtonGuardar" runat="server" OnClick="ButtonGuardar_Click" Text="Guardar" />
             </td>
             <td class="text-center">&nbsp;</td>
-            <td class="text-center">&nbsp;</td>
+            <td class="text-center">
+                <asp:Button ID="BotonEditar" runat="server" Text="EDITAR UN DIAGNOSTICO" />
+            </td>
             <td class="text-center">
                 <asp:Button ID="Button3" runat="server" Height="45px" Text="Cancelar" Width="217px" />
             </td>
