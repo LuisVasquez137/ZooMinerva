@@ -7,9 +7,12 @@
     }
 }
 
-namespace DAL.DataSetZoologicoTableAdapters {
-    
-    
+namespace DAL.DataSetZoologicoTableAdapters
+{
+    partial class El_zooTableAdapter
+    {
+    }
+
     public partial class RegistroTableAdapter {
     }
 }

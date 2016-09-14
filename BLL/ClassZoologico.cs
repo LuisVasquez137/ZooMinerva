@@ -94,5 +94,9 @@ namespace BLL
             return PRECIO.ObtienePrecio(nombre);
 
         }
+        public int Actualiza_Zoo(string Zoo,string Mision, string Vision, string Direccion, string Telefono, string facebook, byte[] mapa, string Horario, int idzoo )
+        {
+            return LISTADO.ActualilzaZoo3(Zoo, Mision, Vision, Direccion, Telefono, facebook, mapa, Horario, idzoo);
+        }
     }
 }
