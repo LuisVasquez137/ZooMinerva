@@ -45,6 +45,7 @@
     <Compile Include="ClassEmpleado.cs" />
     <Compile Include="ClassNoticias.cs" />
     <Compile Include="ClassZoologico.cs" />
+    <Compile Include="Especie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
