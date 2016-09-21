@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
-using System.Data;
 
 namespace DAL
 {
-    /// <summary>
-    /// Clase que mapea a la tabla BD Especie
-    /// </summary>
-    public class Especie
+    public class Animal
     {
         public string ErrorEspecie,sql;
         SqlConnection conexion = null;
@@ -21,7 +18,7 @@ namespace DAL
         /// <summary>
         /// constructor
         /// </summary>
-        public Especie()
+        public Animal()
         {
             sql = string.Empty;
             this.ErrorEspecie = string.Empty;
@@ -35,14 +32,14 @@ namespace DAL
         /// <param name="nombre">nombre especie</param>
         /// <param name="estado">estado de la especie</param>
         /// <returns></returns>
-        public bool Create(string nombre, int estado)
+        public bool Create(string codigo_animal,string alias_animal,string sexo_animal,int estado_animal,int edad_animal,string fecha_nacimiento,string fecha_muerte,string causa_muerte,int id_genero)
         {
             try
             {                
                 SqlCommand cmd = new SqlCommand();
                 conexion.Open();
                 cmd.Connection = conexion;
-                cmd.CommandText = "INSERT INTO Especie(Nombre_especie,Estado_especie) VALUES('"+nombre+"',"+estado+")";
+                cmd.CommandText = "INSERT INTO Animal(codigo_animal,alias_animal,sexo_animal,estado_animal,edad_animal,fecha_nacimiento,fecha_muerte,causa_muerte,id_genero) VALUES('"+codigo_animal+"','"+alias_animal+"','"+sexo_animal+"',"+estado_animal+","+edad_animal+",'"+fecha_nacimiento+"','"+fecha_muerte+"','"+causa_muerte+"',"+id_genero+")";
                 int resultado = cmd.ExecuteNonQuery();
                 conexion.Close();
                 return Configs.resultadoSQL(resultado);                
@@ -62,7 +59,7 @@ namespace DAL
         /// <param name="estado"></param>
         /// <param name="PK"></param>
         /// <returns></returns>
-        public bool Update(string nombre, int estado,int PK)
+        public bool Update(string codigo_animal, string alias_animal, string sexo_animal, int estado_animal, int edad_animal, string fecha_nacimiento, string fecha_muerte, string causa_muerte, int id_genero, int PK)
         {
             try
             {
@@ -70,7 +67,7 @@ namespace DAL
                 conexion.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexion;
-                cmd.CommandText = "UPDATE Especie set Nombre_especie='"+nombre+"',Estado_especie="+estado+" WHERE Id_especie="+PK+"";
+                cmd.CommandText = "UPDATE Animal set codigo_animal='"+codigo_animal+"',alias_animal='"+alias_animal+"',sexo_animal='"+sexo_animal+"',estado_animal="+estado_animal+",fecha_nacimiento='"+fecha_nacimiento+"',fecha_muerte='"+fecha_muerte+"',causa_muerte='"+causa_muerte+"',id_genero="+id_genero+" WHERE Id_animal="+PK+"";
                 int resultado = cmd.ExecuteNonQuery();
                 conexion.Close();
                 return Configs.resultadoSQL(resultado);
@@ -88,12 +85,12 @@ namespace DAL
         /// <param name="nombre"></param>
         /// <param name="estado"></param>
         /// <returns></returns>
-        public int Count(string nombre, int estado)
+        public int Count(string codigoAnimal, int estado)
         {
             try
             {
                 SqlConnection conexion = new SqlConnection(Configs.CadenaConexion);
-                sql = "SELECT *from especie where Nombre_especie='"+nombre+"' AND Estado_especie="+estado+"";
+                sql = "SELECT *FROM Animal where codigo_animal='"+codigoAnimal+"' and Estado_animal="+estado+"";
                 SqlDataAdapter da=new SqlDataAdapter(sql,conexion);
                 da.Fill(tabla);
                 return tabla.Rows.Count;                
@@ -113,7 +110,7 @@ namespace DAL
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie";
+                sql = "SELECT id_animal,codigo_animal,alias_animal,sexo_animal,estado_animal,edad_animal,fecha_nacimiento,fecha_muerte,causa_muerte,id_genero FROM Animal";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
@@ -135,7 +132,7 @@ namespace DAL
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie WHERE Id_especie="+pk+"";
+                sql = "SELECT id_animal,codigo_animal,alias_animal,sexo_animal,estado_animal,edad_animal,fecha_nacimiento,fecha_muerte,causa_muerte,id_genero FROM Animal WHERE Id_animal=" + pk + "";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
@@ -154,11 +151,11 @@ namespace DAL
         /// <param name="nombre"></param>
         /// <param name="estado"></param>
         /// <returns></returns>
-        public DataTable Listar(string nombre,int estado)
+        public DataTable Listar(string codigo,int estado)
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie WHERE Estado_especie=" + estado + " AND  Nombre_especie LIKE '%"+nombre+"%'";
+                sql = "SELECT id_animal,codigo_animal,alias_animal,sexo_animal,estado_animal,edad_animal,fecha_nacimiento,fecha_muerte,causa_muerte,id_genero FROM Animal WHERE Estado_animal=" + estado + " AND codigo_animal LIKE '%" + codigo + "%'";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);

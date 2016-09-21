@@ -3,30 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Sql;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace DAL
 {
     /// <summary>
     /// Clase que mapea a la tabla BD Especie
     /// </summary>
-    public class Especie
+    public class Dieta
     {
-        public string ErrorEspecie,sql;
+        public string ErrorEspecie, sql;
         SqlConnection conexion = null;
-        DataTable tabla =null;
+        DataTable tabla = null;
 
         /// <summary>
         /// constructor
         /// </summary>
-        public Especie()
+        public Dieta()
         {
             sql = string.Empty;
             this.ErrorEspecie = string.Empty;
             tabla = new DataTable();
-            conexion=new SqlConnection(Configs.CadenaConexion);            
+            conexion = new SqlConnection(Configs.CadenaConexion);
         }
 
         /// <summary>
@@ -35,17 +34,17 @@ namespace DAL
         /// <param name="nombre">nombre especie</param>
         /// <param name="estado">estado de la especie</param>
         /// <returns></returns>
-        public bool Create(string nombre, int estado)
+        public bool Create(int idGenero,int idIngrediente,int idUnidad,int peso,string presentacion,int estado)
         {
             try
-            {                
+            {
                 SqlCommand cmd = new SqlCommand();
                 conexion.Open();
                 cmd.Connection = conexion;
-                cmd.CommandText = "INSERT INTO Especie(Nombre_especie,Estado_especie) VALUES('"+nombre+"',"+estado+")";
+                cmd.CommandText = "INSERT INTO Dieta(Id_Genero,Id_Ingrediente,Id_Unidad,Peso,Presentacion,Estado) VALUES("+idGenero+","+idIngrediente+","+idUnidad+","+peso+",'"+presentacion+"',"+estado+")";
                 int resultado = cmd.ExecuteNonQuery();
                 conexion.Close();
-                return Configs.resultadoSQL(resultado);                
+                return Configs.resultadoSQL(resultado);
             }
             catch (Exception ex)
             {
@@ -62,7 +61,7 @@ namespace DAL
         /// <param name="estado"></param>
         /// <param name="PK"></param>
         /// <returns></returns>
-        public bool Update(string nombre, int estado,int PK)
+        public bool Update(int idGenero,int idIngrediente,int idUnidad,int peso,string presentacion, int estado, int PK)
         {
             try
             {
@@ -70,7 +69,7 @@ namespace DAL
                 conexion.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexion;
-                cmd.CommandText = "UPDATE Especie set Nombre_especie='"+nombre+"',Estado_especie="+estado+" WHERE Id_especie="+PK+"";
+                cmd.CommandText = "UPDATE Dieta set Id_Genero="+idGenero+",Id_Ingrediente="+idIngrediente+",Id_Unidad="+idUnidad+",peso="+peso+",presentacion='"+presentacion+"',estado="+estado+" WHERE idDieta=" + PK + "";
                 int resultado = cmd.ExecuteNonQuery();
                 conexion.Close();
                 return Configs.resultadoSQL(resultado);
@@ -88,15 +87,15 @@ namespace DAL
         /// <param name="nombre"></param>
         /// <param name="estado"></param>
         /// <returns></returns>
-        public int Count(string nombre, int estado)
+        public int Count(string presentacion, int estado)
         {
             try
             {
                 SqlConnection conexion = new SqlConnection(Configs.CadenaConexion);
-                sql = "SELECT *from especie where Nombre_especie='"+nombre+"' AND Estado_especie="+estado+"";
-                SqlDataAdapter da=new SqlDataAdapter(sql,conexion);
+                sql = "SELECT *FROM dieta where Presentacion='" + presentacion + "' AND Estado=" + estado + "";
+                SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 da.Fill(tabla);
-                return tabla.Rows.Count;                
+                return tabla.Rows.Count;
             }
             catch (Exception ex)
             {
@@ -113,7 +112,7 @@ namespace DAL
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie";
+                sql = "SELECT idDieta,Id_genero,Id_Ingrediente,Id_Unidad,Peso,Presentacion,Estado FROM dieta";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
@@ -135,7 +134,7 @@ namespace DAL
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie WHERE Id_especie="+pk+"";
+                sql = "SELECT idDieta,Id_genero,Id_Ingrediente,Id_Unidad,Peso,Presentacion,Estado FROM dieta WHERE iddieta=" + pk + "";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
@@ -154,11 +153,11 @@ namespace DAL
         /// <param name="nombre"></param>
         /// <param name="estado"></param>
         /// <returns></returns>
-        public DataTable Listar(string nombre,int estado)
+        public DataTable Listar(string presentacion, int estado)
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie WHERE Estado_especie=" + estado + " AND  Nombre_especie LIKE '%"+nombre+"%'";
+                sql = "SELECT idDieta,Id_genero,Id_Ingrediente,Id_Unidad,Peso,Presentacion,Estado FROM dieta WHERE Estado=" + estado + " AND  presentacion LIKE '%" + presentacion + "%'";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);

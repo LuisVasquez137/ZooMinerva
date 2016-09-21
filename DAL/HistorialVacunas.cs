@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Sql;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace DAL
 {
-    /// <summary>
-    /// Clase que mapea a la tabla BD Especie
-    /// </summary>
-    public class Especie
+    public class HistorialVacunas
     {
         public string ErrorEspecie,sql;
         SqlConnection conexion = null;
@@ -21,7 +17,7 @@ namespace DAL
         /// <summary>
         /// constructor
         /// </summary>
-        public Especie()
+        public HistorialVacunas()
         {
             sql = string.Empty;
             this.ErrorEspecie = string.Empty;
@@ -30,19 +26,20 @@ namespace DAL
         }
 
         /// <summary>
-        /// CREAR ESPECIE
+        /// HISTORIAL VACUNAS
         /// </summary>
-        /// <param name="nombre">nombre especie</param>
-        /// <param name="estado">estado de la especie</param>
+        /// <param name="idAnimal"></param>
+        /// <param name="idVacuna"></param>
+        /// <param name="fecha"></param>
         /// <returns></returns>
-        public bool Create(string nombre, int estado)
+        public bool Create(int idAnimal,int idVacuna,DateTime fecha)
         {
             try
             {                
                 SqlCommand cmd = new SqlCommand();
                 conexion.Open();
                 cmd.Connection = conexion;
-                cmd.CommandText = "INSERT INTO Especie(Nombre_especie,Estado_especie) VALUES('"+nombre+"',"+estado+")";
+                cmd.CommandText = "INSERT INTO HistorialVacunas(id_animal,id_vacuna,fecha) VALUES("+idAnimal+","+idVacuna+","+fecha+")";
                 int resultado = cmd.ExecuteNonQuery();
                 conexion.Close();
                 return Configs.resultadoSQL(resultado);                
@@ -56,13 +53,14 @@ namespace DAL
         }
 
         /// <summary>
-        /// MODIFICAR ESPECIE
+        /// Fecha Vacuna
         /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="estado"></param>
+        /// <param name="idVacuna"></param>
+        /// <param name="idAnimal"></param>
+        /// <param name="fecha"></param>
         /// <param name="PK"></param>
         /// <returns></returns>
-        public bool Update(string nombre, int estado,int PK)
+        public bool Update(int idVacuna,int idAnimal,DateTime fecha,int PK)
         {
             try
             {
@@ -70,7 +68,7 @@ namespace DAL
                 conexion.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexion;
-                cmd.CommandText = "UPDATE Especie set Nombre_especie='"+nombre+"',Estado_especie="+estado+" WHERE Id_especie="+PK+"";
+                cmd.CommandText = "UPDATE HistorialVacunas set id_animal="+idAnimal+",id_vacuna="+idVacuna+",fecha="+fecha+" WHERE Id_historial_vacuna="+PK+"";
                 int resultado = cmd.ExecuteNonQuery();
                 conexion.Close();
                 return Configs.resultadoSQL(resultado);
@@ -83,17 +81,17 @@ namespace DAL
         }
 
         /// <summary>
-        /// Validacion de existencia
+        /// VALIDACION EXISTENCIA
         /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="estado"></param>
+        /// <param name="idAnimal"></param>
+        /// <param name="idVacuna"></param>
         /// <returns></returns>
-        public int Count(string nombre, int estado)
+        public int Count(int idAnimal,int idVacuna)
         {
             try
             {
                 SqlConnection conexion = new SqlConnection(Configs.CadenaConexion);
-                sql = "SELECT *from especie where Nombre_especie='"+nombre+"' AND Estado_especie="+estado+"";
+                sql = "SELECT *FROM Historial_vacunas WHERE id_animal=+"+idAnimal+" and id_vacuna="+idVacuna+"";
                 SqlDataAdapter da=new SqlDataAdapter(sql,conexion);
                 da.Fill(tabla);
                 return tabla.Rows.Count;                
@@ -113,7 +111,7 @@ namespace DAL
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie";
+                sql = "select hv.Id_historial_vacuna,hv.Id_animal,hv.Id_vacuna,hv.Fecha_vacuna,V.Nombre_vacuna,V.Estado_vacuna,a.Codigo_animal,A.Alias_animal FROM HistorialVacunas HV INNER JOIN Vacunas V on v.Id_vacuna=hv.Id_vacuna INNER JOIN Animal A on A.Id_animal=HV.Id_animal";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
@@ -135,7 +133,7 @@ namespace DAL
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie WHERE Id_especie="+pk+"";
+                sql = "select hv.Id_historial_vacuna,hv.Id_animal,hv.Id_vacuna,hv.Fecha_vacuna,V.Nombre_vacuna,V.Estado_vacuna,a.Codigo_animal,A.Alias_animal FROM HistorialVacunas HV INNER JOIN Vacunas V on v.Id_vacuna=hv.Id_vacuna INNER JOIN Animal A on A.Id_animal=HV.Id_animal WHERE HV.id_historial_vacuna="+pk+"";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
@@ -149,16 +147,16 @@ namespace DAL
         }
 
         /// <summary>
-        /// Listado por coincidencia al nombre y estado
+        /// LISTAR
         /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="estado"></param>
+        /// <param name="nombreVacuna"></param>
+        /// <param name="nombreAniaml"></param>
         /// <returns></returns>
-        public DataTable Listar(string nombre,int estado)
+        public DataTable Listar(string nombreVacuna,string nombreAniaml)
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie WHERE Estado_especie=" + estado + " AND  Nombre_especie LIKE '%"+nombre+"%'";
+                sql = "select hv.Id_historial_vacuna,hv.Id_animal,hv.Id_vacuna,hv.Fecha_vacuna,V.Nombre_vacuna,V.Estado_vacuna,a.Codigo_animal,A.Alias_animal FROM HistorialVacunas HV INNER JOIN Vacunas V on v.Id_vacuna=hv.Id_vacuna INNER JOIN Animal A on A.Id_animal=HV.Id_animal WHERE V.nombre_vacuna like '%"+nombreVacuna+"%' AND A.Alias_animal like '%"+nombreAniaml+"%'";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);

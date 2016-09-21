@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Sql;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace DAL
 {
     /// <summary>
-    /// Clase que mapea a la tabla BD Especie
+    /// clase que modela la tabla vacuna
     /// </summary>
-    public class Especie
+    public class Vacuna
     {
         public string ErrorEspecie,sql;
         SqlConnection conexion = null;
@@ -21,7 +20,7 @@ namespace DAL
         /// <summary>
         /// constructor
         /// </summary>
-        public Especie()
+        public Vacuna()
         {
             sql = string.Empty;
             this.ErrorEspecie = string.Empty;
@@ -30,19 +29,19 @@ namespace DAL
         }
 
         /// <summary>
-        /// CREAR ESPECIE
+        /// CREAR VACUNA
         /// </summary>
-        /// <param name="nombre">nombre especie</param>
-        /// <param name="estado">estado de la especie</param>
+        /// <param name="nombreComun"></param>
+        /// <param name="estado"></param>
         /// <returns></returns>
-        public bool Create(string nombre, int estado)
+        public bool Create(string nombre,int estado)
         {
             try
             {                
                 SqlCommand cmd = new SqlCommand();
                 conexion.Open();
                 cmd.Connection = conexion;
-                cmd.CommandText = "INSERT INTO Especie(Nombre_especie,Estado_especie) VALUES('"+nombre+"',"+estado+")";
+                cmd.CommandText = "INSERT INTO Vacunas(Nombre_vacuna,estado_vacuna) VALUES('"+nombre+"',"+estado+")";
                 int resultado = cmd.ExecuteNonQuery();
                 conexion.Close();
                 return Configs.resultadoSQL(resultado);                
@@ -56,11 +55,10 @@ namespace DAL
         }
 
         /// <summary>
-        /// MODIFICAR ESPECIE
+        /// MODIFICAR VACUNA
         /// </summary>
         /// <param name="nombre"></param>
         /// <param name="estado"></param>
-        /// <param name="PK"></param>
         /// <returns></returns>
         public bool Update(string nombre, int estado,int PK)
         {
@@ -70,7 +68,7 @@ namespace DAL
                 conexion.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexion;
-                cmd.CommandText = "UPDATE Especie set Nombre_especie='"+nombre+"',Estado_especie="+estado+" WHERE Id_especie="+PK+"";
+                cmd.CommandText = "UPDATE Vacunas set Nombre_vacuna='"+nombre+"',Estado_vacuna="+estado+" WHERE Id_vacuna="+PK+"";
                 int resultado = cmd.ExecuteNonQuery();
                 conexion.Close();
                 return Configs.resultadoSQL(resultado);
@@ -83,7 +81,7 @@ namespace DAL
         }
 
         /// <summary>
-        /// Validacion de existencia
+        /// validacon existencia
         /// </summary>
         /// <param name="nombre"></param>
         /// <param name="estado"></param>
@@ -93,7 +91,7 @@ namespace DAL
             try
             {
                 SqlConnection conexion = new SqlConnection(Configs.CadenaConexion);
-                sql = "SELECT *from especie where Nombre_especie='"+nombre+"' AND Estado_especie="+estado+"";
+                sql = "SELECT *FROM Vacunas WHERE nombre_vacuna='"+nombre+"' and Estado_vacuna="+estado+"";
                 SqlDataAdapter da=new SqlDataAdapter(sql,conexion);
                 da.Fill(tabla);
                 return tabla.Rows.Count;                
@@ -113,7 +111,7 @@ namespace DAL
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie";
+                sql = "SELECT Id_vacuna,nombre_vacuna,estado_vacuna FROM vacunas";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
@@ -135,7 +133,7 @@ namespace DAL
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie WHERE Id_especie="+pk+"";
+                sql = "SELECT Id_vacuna,nombre_vacuna,estado_vacuna FROM vacunas WHERE Id_vacuna=" + pk + "";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
@@ -158,7 +156,7 @@ namespace DAL
         {
             try
             {
-                sql = "SELECT Id_especie,Nombre_especie,Estado_especie FROM especie WHERE Estado_especie=" + estado + " AND  Nombre_especie LIKE '%"+nombre+"%'";
+                sql = "SELECT Id_vacuna,nombre_vacuna,estado_vacuna FROM vacunas WHERE Estado_vacuna=" + estado + " AND nombre_vacuna LIKE '%" + nombre + "%'";
                 SqlDataAdapter da = new SqlDataAdapter(sql, conexion);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
