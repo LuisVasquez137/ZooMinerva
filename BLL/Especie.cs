@@ -14,7 +14,7 @@ namespace BLL
 
         public bool Create(string nombre, int estado)
         {
-            return DTOEspecie.Create(nombre, estado);
+            return DTOEspecie.Create(nombre, estado);            
         }
 
         public bool Update(string nombre, int estado, int pk)
@@ -22,7 +22,7 @@ namespace BLL
             return DTOEspecie.Update(nombre, estado, pk);
         }
 
-        public int Count(string nombre, int estado)
+        public int Count(string nombre,int estado)
         {
             return DTOEspecie.Count(nombre, estado);
         }
@@ -37,9 +37,9 @@ namespace BLL
             return DTOEspecie.Listar(id);
         }
 
-        public DataTable Listar(string nombre, int estado)
+        public DataTable Listar(string nombre,int estado)
         {
-            return DTOEspecie.Listar(nombre, estado);
+            return DTOEspecie.Listar(nombre,estado);
         }
     }
 }
