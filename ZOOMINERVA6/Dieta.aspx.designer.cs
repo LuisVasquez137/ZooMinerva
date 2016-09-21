@@ -10,34 +10,52 @@
 namespace ZOOMINERVA6 {
     
     
-    public partial class AdministracionEspecie {
+    public partial class Dieta {
         
         /// <summary>
-        /// Control lblNombre.
+        /// Control ddlGeneros.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombre;
+        protected global::System.Web.UI.WebControls.DropDownList ddlGeneros;
         
         /// <summary>
-        /// Control txtNombre.
+        /// Control ddlUnidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.DropDownList ddlUnidad;
         
         /// <summary>
-        /// Control lblEstado.
+        /// Control ddlIngrediente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEstado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlIngrediente;
+        
+        /// <summary>
+        /// Control txtPeso.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPeso;
+        
+        /// <summary>
+        /// Control txtPresentacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPresentacion;
         
         /// <summary>
         /// Control ddlEstado.
@@ -67,13 +85,13 @@ namespace ZOOMINERVA6 {
         protected global::System.Web.UI.WebControls.Button btnEditar;
         
         /// <summary>
-        /// Control btnBuscar.
+        /// Control txtBuscar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
+        protected global::System.Web.UI.WebControls.Button txtBuscar;
         
         /// <summary>
         /// Control btnExportar.
@@ -85,22 +103,22 @@ namespace ZOOMINERVA6 {
         protected global::System.Web.UI.WebControls.Button btnExportar;
         
         /// <summary>
-        /// Control btnRefrescar.
+        /// Control btnCancelar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRefrescar;
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
         
         /// <summary>
-        /// Control lblMensajes.
+        /// Control lblMensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensajes;
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
         
         /// <summary>
         /// Control gvListado.

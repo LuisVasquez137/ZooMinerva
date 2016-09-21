@@ -10,34 +10,16 @@
 namespace ZOOMINERVA6 {
     
     
-    public partial class AdministracionEspecie {
+    public partial class AdministracionVacunas {
         
         /// <summary>
-        /// Control lblNombre.
+        /// Control txtVacuna.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombre;
-        
-        /// <summary>
-        /// Control txtNombre.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
-        
-        /// <summary>
-        /// Control lblEstado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEstado;
+        protected global::System.Web.UI.WebControls.TextBox txtVacuna;
         
         /// <summary>
         /// Control ddlEstado.
@@ -49,13 +31,13 @@ namespace ZOOMINERVA6 {
         protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
         
         /// <summary>
-        /// Control btnGuardar.
+        /// Control btnAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardar;
+        protected global::System.Web.UI.WebControls.Button btnAgregar;
         
         /// <summary>
         /// Control btnEditar.
@@ -85,13 +67,13 @@ namespace ZOOMINERVA6 {
         protected global::System.Web.UI.WebControls.Button btnExportar;
         
         /// <summary>
-        /// Control btnRefrescar.
+        /// Control btnCancelar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRefrescar;
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
         
         /// <summary>
         /// Control lblMensajes.

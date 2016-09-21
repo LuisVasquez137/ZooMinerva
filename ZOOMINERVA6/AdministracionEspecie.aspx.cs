@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using BLL;
-
+using GemBox.Spreadsheet;
 
 namespace ZOOMINERVA6
 {
@@ -56,7 +56,7 @@ namespace ZOOMINERVA6
         protected void gvListado_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvListado.PageIndex = e.NewPageIndex;
-            especie.Listar();
+            especie.Listar();  
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace ZOOMINERVA6
                     gvListado.DataBind();
                     lblMensajes.Visible = false;
                     txtNombre.Text = string.Empty;
-                }
+                }               
             }
             catch (Exception ex)
             {
@@ -145,7 +145,7 @@ namespace ZOOMINERVA6
             {
                 lblMensajes.Visible = true;
                 lblMensajes.Text = "Información almacenda en el sistema";
-                return false;
+                return false; 
             }
 
             if (Convert.ToInt32(ddlEstado.SelectedValue) <= -1)
@@ -154,33 +154,33 @@ namespace ZOOMINERVA6
                 lblMensajes.Text = "Error en el campo de estado";
                 return false;
             }
-            return true;
+            return true; 
         }
         #endregion
 
-        /*   protected void btnExportar_Click(object sender, EventArgs e)
-           {
-               SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+        protected void btnExportar_Click(object sender, EventArgs e)
+        {
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+            
+            ExcelFile ef = new ExcelFile();
+            ExcelWorksheet ws = ef.Worksheets.Add("Especies");
+            
+            ws.Cells[0, 0].Value = "CODIGO:";
+            ws.Cells[0, 1].Value = "NOMBRE";
+            ws.Cells[0, 1].Value = "ESTADO";
 
-               ExcelFile ef = new ExcelFile();
-               ExcelWorksheet ws = ef.Worksheets.Add("Especies");
+            DataTable reporte = new DataTable();
+            reporte=especie.Listar();
 
-               ws.Cells[0, 0].Value = "CODIGO:";
-               ws.Cells[0, 1].Value = "NOMBRE";
-               ws.Cells[0, 1].Value = "ESTADO";
+            for (int i = 0; i <= reporte.Rows.Count; i++)
+            {
+                ws.Cells[i, 0].Value = reporte.Columns[0].ToString();
+                ws.Cells[i, 1].Value = reporte.Columns[1].ToString();
+                ws.Cells[i, 2].Value = reporte.Columns[2].ToString();
+            }
 
-               DataTable reporte = new DataTable();
-               reporte = especie.Listar();
-
-               for (int i = 0; i <= reporte.Rows.Count; i++)
-               {
-                   ws.Cells[i, 0].Value = reporte.Columns[0].ToString();
-                   ws.Cells[i, 1].Value = reporte.Columns[1].ToString();
-                   ws.Cells[i, 2].Value = reporte.Columns[2].ToString();
-               }
-
-
-               ef.Save(ConfigsWP.almacenamiento + "Especies.xls");
-           }*/
+            
+            ef.Save(ConfigsWP.almacenamiento+"Especies.xls");
+        }
     }
 }

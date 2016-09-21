@@ -2,57 +2,12 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-
-      <style type="text/css">
-
-           .fondo {
-               background-image: url('images/madera4.jpg');
-           }
-
-            .marco2 {
-             
-               border-radius: 20px;
-               
-               margin: 50px;
-               width:auto;
-               font-size: small; 
-              
-               background-image: url('images/beige2.jpg');
-                color: #003399;
-    
-    
-           }
-             .auto-style1 {
-             font-size: x-large;
-         }
-         .auto-style2 {
-             font-size: x-large;
-             text-align: center;
-         }
-         .auto-style3 {
-             height: 193px;
-         }
-         .auto-style4 {
-             height: 32px;
-         }
-             .auto-style5 {
-             height: 193px;
-             text-align: right;
-         }
-             </style>
-
-
-
-    <div class="fondo">
-
-    
-
     <br /><br /><br /><br /><br /><br />
     <div class="panel-info">
-    <div class="panel-heading">    
+    <div class="panel-heading" style="background-image: url('images/beige2.jpg')">    
         <center><strong style="font-size: x-large">Administración de especies </strong> </center>
     
-        <div class="marco2">
+
         <table class="auto-style1">
             <tr>
                 <td class="auto-style4">
@@ -93,6 +48,7 @@
                     <asp:Button ID="btnGuardar" runat="server" Text="Agregar" class="btn btn-primary active" OnClick="btnGuardar_Click" />
                     <asp:Button ID="btnEditar" runat="server" Text="Editar" class="btn btn-primary  active" OnClick="btnEditar_Click"/>
                     <asp:Button ID="btnBuscar" runat="server"  Text="Buscar" class="btn btn-success  active" OnClick="btnBuscar_Click" />
+                    <asp:Button ID="btnExportar" runat="server" Text="Exportar" class="btn btn-info active" Height="25px" OnClick="btnExportar_Click"/>
                     <asp:Button ID="btnRefrescar" runat="server" Text="Cancelar" class="btn btn-danger  active" OnClick="btnRefrescar_Click"/>
                 </td>
                 <td class="auto-style3" colspan="4">
@@ -100,9 +56,8 @@
                 </td>
             </tr>
         </table>
-            </div>
     </div>
-        <div class="panel-body">
+        <div class="panel-body" style="background-image: url('images/madera3.jpg')">
             <asp:GridView ID="gvListado" runat="server" AllowPaging="True" AutoGenerateColumns="False" class="table table-striped" OnPageIndexChanging="gvListado_PageIndexChanging" OnSelectedIndexChanged="gvListado_SelectedIndexChanged" >
             <Columns>
                 <asp:BoundField DataField="Id_especie" HeaderText="ID" />
@@ -113,6 +68,5 @@
         </asp:GridView>
         </div>
 
-        </div>
         </div>
 </asp:Content>
