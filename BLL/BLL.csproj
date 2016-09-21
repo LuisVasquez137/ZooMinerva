@@ -40,11 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
     <Compile Include="ClassAnimales.cs" />
     <Compile Include="ClassDiagnostico.cs" />
     <Compile Include="ClassEmpleado.cs" />
     <Compile Include="ClassZoologico.cs" />
+    <Compile Include="Cuarentena.cs" />
+    <Compile Include="Dieta.cs" />
+    <Compile Include="Donacion.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="Especie.cs" />
+    <Compile Include="Genero.cs" />
+    <Compile Include="HistorialVacunas.cs" />
+    <Compile Include="Ingrediente.cs" />
+    <Compile Include="Origen.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unidad.cs" />
+    <Compile Include="Vacuna.cs" />
+    <Compile Include="Validador.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

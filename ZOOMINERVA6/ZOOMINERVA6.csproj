@@ -198,14 +198,22 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AdministracionAnimales.aspx" />
+    <Content Include="AdministracionCuarentenas.aspx" />
+    <Content Include="AdministracionEspecie.aspx" />
+    <Content Include="AdministracionGeneros.aspx" />
+    <Content Include="AdministracionVacunas.aspx" />
     <Content Include="AgregaPaquetes.aspx" />
     <Content Include="Animales.aspx" />
     <Content Include="BajaEmpleado.aspx" />
+    <Content Include="CargoEmpleados.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Diagnostico.aspx" />
+    <Content Include="Dieta.aspx" />
+    <Content Include="Donaciones.aspx" />
     <Content Include="Educacion.aspx" />
     <Content Include="Empleados.aspx" />
     <Content Include="Eventos.aspx" />
@@ -402,6 +410,41 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdministracionAnimales.aspx.cs">
+      <DependentUpon>AdministracionAnimales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministracionAnimales.aspx.designer.cs">
+      <DependentUpon>AdministracionAnimales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionCuarentenas.aspx.cs">
+      <DependentUpon>AdministracionCuarentenas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministracionCuarentenas.aspx.designer.cs">
+      <DependentUpon>AdministracionCuarentenas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionEspecie.aspx.cs">
+      <DependentUpon>AdministracionEspecie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministracionEspecie.aspx.designer.cs">
+      <DependentUpon>AdministracionEspecie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionGeneros.aspx.cs">
+      <DependentUpon>AdministracionGeneros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministracionGeneros.aspx.designer.cs">
+      <DependentUpon>AdministracionGeneros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionVacunas.aspx.cs">
+      <DependentUpon>AdministracionVacunas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministracionVacunas.aspx.designer.cs">
+      <DependentUpon>AdministracionVacunas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregaPaquetes.aspx.cs">
       <DependentUpon>AgregaPaquetes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -434,6 +477,14 @@
     <Compile Include="BajaEmpleado.aspx.designer.cs">
       <DependentUpon>BajaEmpleado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CargoEmpleados.aspx.cs">
+      <DependentUpon>CargoEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargoEmpleados.aspx.designer.cs">
+      <DependentUpon>CargoEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigsWP.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -454,6 +505,20 @@
     </Compile>
     <Compile Include="Diagnostico.aspx.designer.cs">
       <DependentUpon>Diagnostico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dieta.aspx.cs">
+      <DependentUpon>Dieta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieta.aspx.designer.cs">
+      <DependentUpon>Dieta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donaciones.aspx.cs">
+      <DependentUpon>Donaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donaciones.aspx.designer.cs">
+      <DependentUpon>Donaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Educacion.aspx.cs">
       <DependentUpon>Educacion.aspx</DependentUpon>
