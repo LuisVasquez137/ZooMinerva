@@ -47,6 +47,7 @@
     <Compile Include="ClassNoticias.cs" />
     <Compile Include="ClassZoologico.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Cuarentena.cs" />
     <Compile Include="Dieta.cs" />
     <Compile Include="Donacion.cs" />
@@ -57,6 +58,9 @@
     <Compile Include="Ingrediente.cs" />
     <Compile Include="Origen.cs" />
     <Compile Include="Persona.cs" />
+=======
+    <Compile Include="Especie.cs" />
+>>>>>>> origin/master
 =======
     <Compile Include="Especie.cs" />
 >>>>>>> origin/master

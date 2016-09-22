@@ -198,6 +198,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+<<<<<<< HEAD
     <Content Include="AdministracionAnimales.aspx" />
     <Content Include="AdministracionCuarentenas.aspx" />
     <Content Include="AdministracionEspecie.aspx" />
@@ -206,16 +207,24 @@
     <Content Include="AgregaPaquetes.aspx" />
     <Content Include="Animales.aspx" />
     <Content Include="BajaEmpleado.aspx" />
+=======
+    <Content Include="AdministracionEspecie.aspx" />
+    <Content Include="AgregaPaquetes.aspx" />
+    <Content Include="Animales.aspx" />
+>>>>>>> origin/master
     <Content Include="CargoEmpleados.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Diagnostico.aspx" />
+<<<<<<< HEAD
     <Content Include="Dieta.aspx" />
     <Content Include="Donaciones.aspx" />
+=======
+    <Content Include="Editar_Info.aspx" />
+>>>>>>> origin/master
     <Content Include="Educacion.aspx" />
-    <Content Include="Empleados.aspx" />
     <Content Include="Eventos.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -236,11 +245,16 @@
     <Content Include="images\7.jpg" />
     <Content Include="images\animales.jpg" />
     <Content Include="images\Arreglada9.jpg" />
+    <Content Include="images\beige2.jpg" />
     <Content Include="images\cabras.jpg" />
+    <Content Include="images\cargoEmpleado.jpg" />
+    <Content Include="images\empleados.jpg" />
     <Content Include="images\leon2.jpeg" />
+    <Content Include="images\leopardo.jpg" />
     <Content Include="images\login.jpg" />
     <Content Include="images\loros.jpg" />
     <Content Include="images\madera3.jpg" />
+    <Content Include="images\madera4.jpg" />
     <Content Include="images\obejas.jpg" />
     <Content Include="images\tigre.jpg" />
     <Content Include="images\tortuga.jpg" />
@@ -249,11 +263,13 @@
     <Content Include="images\tucan3.jpg" />
     <Content Include="images\zoo.jpg" />
     <Content Include="images\zoologico.png" />
+    <Content Include="IngresarNoticias.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Nacimientos.aspx" />
     <Content Include="Noticias.aspx" />
     <Content Include="Nuevo empleado.aspx" />
     <Content Include="NuevoPaquete.aspx" />
+    <Content Include="RegistroVisitas.aspx" />
     <Content Include="ReporteDiagnostico.aspx" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
@@ -410,6 +426,7 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="AdministracionAnimales.aspx.cs">
       <DependentUpon>AdministracionAnimales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -424,6 +441,8 @@
     <Compile Include="AdministracionCuarentenas.aspx.designer.cs">
       <DependentUpon>AdministracionCuarentenas.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/master
     <Compile Include="AdministracionEspecie.aspx.cs">
       <DependentUpon>AdministracionEspecie.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -431,6 +450,7 @@
     <Compile Include="AdministracionEspecie.aspx.designer.cs">
       <DependentUpon>AdministracionEspecie.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="AdministracionGeneros.aspx.cs">
       <DependentUpon>AdministracionGeneros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -445,6 +465,8 @@
     <Compile Include="AdministracionVacunas.aspx.designer.cs">
       <DependentUpon>AdministracionVacunas.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/master
     <Compile Include="AgregaPaquetes.aspx.cs">
       <DependentUpon>AgregaPaquetes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -470,11 +492,17 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+<<<<<<< HEAD
     <Compile Include="BajaEmpleado.aspx.cs">
       <DependentUpon>BajaEmpleado.aspx</DependentUpon>
+=======
+    <Compile Include="CargoEmpleados.aspx.cs">
+      <DependentUpon>CargoEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+>>>>>>> origin/master
     </Compile>
-    <Compile Include="BajaEmpleado.aspx.designer.cs">
-      <DependentUpon>BajaEmpleado.aspx</DependentUpon>
+    <Compile Include="CargoEmpleados.aspx.designer.cs">
+      <DependentUpon>CargoEmpleados.aspx</DependentUpon>
     </Compile>
     <Compile Include="CargoEmpleados.aspx.cs">
       <DependentUpon>CargoEmpleados.aspx</DependentUpon>
@@ -505,6 +533,7 @@
     <Compile Include="Diagnostico.aspx.designer.cs">
       <DependentUpon>Diagnostico.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Dieta.aspx.cs">
       <DependentUpon>Dieta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -518,6 +547,14 @@
     </Compile>
     <Compile Include="Donaciones.aspx.designer.cs">
       <DependentUpon>Donaciones.aspx</DependentUpon>
+=======
+    <Compile Include="Editar_Info.aspx.cs">
+      <DependentUpon>Editar_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editar_Info.aspx.designer.cs">
+      <DependentUpon>Editar_Info.aspx</DependentUpon>
+>>>>>>> origin/master
     </Compile>
     <Compile Include="Educacion.aspx.cs">
       <DependentUpon>Educacion.aspx</DependentUpon>
@@ -526,12 +563,15 @@
     <Compile Include="Educacion.aspx.designer.cs">
       <DependentUpon>Educacion.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Empleados.aspx.cs">
       <DependentUpon>Empleados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Empleados.aspx.designer.cs">
       <DependentUpon>Empleados.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/master
     <Compile Include="Eventos.aspx.cs">
       <DependentUpon>Eventos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -541,6 +581,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarNoticias.aspx.cs">
+      <DependentUpon>IngresarNoticias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresarNoticias.aspx.designer.cs">
+      <DependentUpon>IngresarNoticias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -579,6 +626,13 @@
       <DependentUpon>NuevoPaquete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroVisitas.aspx.cs">
+      <DependentUpon>RegistroVisitas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroVisitas.aspx.designer.cs">
+      <DependentUpon>RegistroVisitas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReporteDiagnostico.aspx.cs">
       <DependentUpon>ReporteDiagnostico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -28,7 +28,11 @@ namespace ZOOMINERVA6
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/master
 =======
             
 >>>>>>> origin/master
@@ -46,9 +50,13 @@ namespace ZOOMINERVA6
         {
             ClassEmpleado logica = new ClassEmpleado();
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             logica.Inserta_Cargos(TextBox1.Text, TextBox2.Text);
 
+=======
+            logica.Inserta_Cargos(TextBox1.Text,TextBox2.Text);
+>>>>>>> origin/master
 =======
             logica.Inserta_Cargos(TextBox1.Text,TextBox2.Text);
 >>>>>>> origin/master

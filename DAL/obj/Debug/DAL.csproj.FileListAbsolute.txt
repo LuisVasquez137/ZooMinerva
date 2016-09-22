@@ -5,6 +5,7 @@ c:\users\dell\documents\visual studio 2015\Projects\SistemaZoologicoMinerva\DAL\
 C:\Users\DELL\Documents\Visual Studio 2015\Projects\SistemaZoologicoMinerva\DAL\bin\Debug\DAL.dll.config
 C:\Users\DELL\Documents\Visual Studio 2015\Projects\SistemaZoologicoMinerva\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Edgar Cap\Source\Repos\ZooMinerva\DAL\bin\Debug\DAL.dll.config
 C:\Users\Edgar Cap\Source\Repos\ZooMinerva\DAL\bin\Debug\DAL.dll
 C:\Users\Edgar Cap\Source\Repos\ZooMinerva\DAL\bin\Debug\DAL.pdb
@@ -12,10 +13,15 @@ C:\Users\Edgar Cap\Source\Repos\ZooMinerva\DAL\obj\Debug\DAL.csprojResolveAssemb
 C:\Users\Edgar Cap\Source\Repos\ZooMinerva\DAL\obj\Debug\DAL.dll
 C:\Users\Edgar Cap\Source\Repos\ZooMinerva\DAL\obj\Debug\DAL.pdb
 =======
+=======
+>>>>>>> origin/master
 C:\Users\DELL\Source\Repos\ZooMinerva\DAL\bin\Debug\DAL.dll.config
 C:\Users\DELL\Source\Repos\ZooMinerva\DAL\bin\Debug\DAL.dll
 C:\Users\DELL\Source\Repos\ZooMinerva\DAL\bin\Debug\DAL.pdb
 C:\Users\DELL\Source\Repos\ZooMinerva\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\DELL\Source\Repos\ZooMinerva\DAL\obj\Debug\DAL.dll
 C:\Users\DELL\Source\Repos\ZooMinerva\DAL\obj\Debug\DAL.pdb
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
