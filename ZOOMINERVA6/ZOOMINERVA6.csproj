@@ -472,7 +472,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="BajaEmpleado.aspx.cs">
       <DependentUpon>BajaEmpleado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BajaEmpleado.aspx.designer.cs">
       <DependentUpon>BajaEmpleado.aspx</DependentUpon>
@@ -529,7 +528,6 @@
     </Compile>
     <Compile Include="Empleados.aspx.cs">
       <DependentUpon>Empleados.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Empleados.aspx.designer.cs">
       <DependentUpon>Empleados.aspx</DependentUpon>

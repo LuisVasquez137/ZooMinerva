@@ -13,6 +13,7 @@ namespace ZOOMINERVA6
     {
         public static int bandera = 0;
         public static int ban = 0;
+        public static int CodigoEmpleado=0;
         protected void Page_Load(object sender, EventArgs e)
         {
             Label2.Attributes.Add("style", "Color:Blue; border-radius: 25px;  background: #73AD21;  padding: 20px; width: 200px;  height: 150px; ");
@@ -32,6 +33,11 @@ namespace ZOOMINERVA6
             {
                 if (conteo > 0)
                 {
+
+                    DataTable TablaCodigo;
+                    TablaCodigo = logicalog.ObtieneCodigoEmpleado(TextBox1.Text, TextBox2.Text);
+
+                    CodigoEmpleado=Convert.ToInt32(TablaCodigo.Rows[0][0].ToString());
                     Label4.Text = "Bienvenido";
                     bandera = 1;
                     Response.Redirect("Default.aspx");

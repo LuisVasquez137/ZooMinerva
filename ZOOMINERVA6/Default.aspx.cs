@@ -31,6 +31,8 @@ namespace ZOOMINERVA6
                 LinkButton17.Visible = true;
 
                 LinkButton18.Visible = true;
+                LinkButtonVisitas.Visible = true;
+                LinkButtonCargos.Visible = true;
             }
             else
             {
@@ -45,6 +47,8 @@ namespace ZOOMINERVA6
                 LinkButton16.Visible = false;
                 LinkButton17.Visible = false;
                 LinkButton18.Visible = false;
+                LinkButtonVisitas.Visible = false;
+                LinkButtonCargos.Visible = false;
             }
             }
 
@@ -69,7 +73,7 @@ namespace ZOOMINERVA6
 
         protected void LinkButton15_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Empleados.aspx");
+            Response.Redirect("Nuevo empleado.aspx");
         }
 
         protected void LinkButton16_Click(object sender, EventArgs e)
@@ -85,7 +89,22 @@ namespace ZOOMINERVA6
 
         protected void LinkButton18_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Diagnostico.aspx");
+            Response.Redirect("ReporteDiagnostico.aspx");
+        }
+
+        protected void LinkButtonVisitas_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RegistroVisitas.aspx");
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButton19_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CargoEmpleados.aspx");
         }
     }
 }

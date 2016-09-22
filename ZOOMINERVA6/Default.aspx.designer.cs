@@ -103,6 +103,24 @@ namespace ZOOMINERVA6 {
         protected global::System.Web.UI.WebControls.LinkButton LinkButton18;
         
         /// <summary>
+        /// Control LinkButtonVisitas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonVisitas;
+        
+        /// <summary>
+        /// Control LinkButtonCargos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonCargos;
+        
+        /// <summary>
         /// Control LinkButton16.
         /// </summary>
         /// <remarks>

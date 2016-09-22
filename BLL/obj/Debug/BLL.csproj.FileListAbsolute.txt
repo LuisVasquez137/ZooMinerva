@@ -5,3 +5,10 @@ C:\Users\DELL\Documents\Visual Studio 2015\Projects\SistemaZoologicoMinerva\BLL\
 C:\Users\DELL\Documents\Visual Studio 2015\Projects\SistemaZoologicoMinerva\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\DELL\Documents\Visual Studio 2015\Projects\SistemaZoologicoMinerva\BLL\obj\Debug\BLL.dll
 C:\Users\DELL\Documents\Visual Studio 2015\Projects\SistemaZoologicoMinerva\BLL\obj\Debug\BLL.pdb
+C:\Users\DELL\Source\Repos\ZooMinerva\BLL\bin\Debug\BLL.dll
+C:\Users\DELL\Source\Repos\ZooMinerva\BLL\bin\Debug\BLL.pdb
+C:\Users\DELL\Source\Repos\ZooMinerva\BLL\bin\Debug\DAL.dll
+C:\Users\DELL\Source\Repos\ZooMinerva\BLL\bin\Debug\DAL.pdb
+C:\Users\DELL\Source\Repos\ZooMinerva\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Source\Repos\ZooMinerva\BLL\obj\Debug\BLL.dll
+C:\Users\DELL\Source\Repos\ZooMinerva\BLL\obj\Debug\BLL.pdb

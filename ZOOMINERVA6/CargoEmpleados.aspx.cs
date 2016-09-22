@@ -27,7 +27,11 @@ namespace ZOOMINERVA6
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/master
 
         }
 
@@ -41,9 +45,13 @@ namespace ZOOMINERVA6
         protected void Button2_Click(object sender, EventArgs e)
         {
             ClassEmpleado logica = new ClassEmpleado();
+<<<<<<< HEAD
             
             logica.Inserta_Cargos(TextBox1.Text, TextBox2.Text);
 
+=======
+            logica.Inserta_Cargos(TextBox1.Text,TextBox2.Text);
+>>>>>>> origin/master
             GridView1.DataBind();
         }
     }

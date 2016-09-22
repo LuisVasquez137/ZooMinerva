@@ -62,7 +62,8 @@
                         <asp:LinkButton ID="LinkButton18" runat="server" ForeColor="White" OnClick="LinkButton18_Click">Historial medico</asp:LinkButton>
                     </td>
                     <td style="color: #FFFFFF">
-                        &nbsp;</td>
+                        <asp:LinkButton ID="LinkButtonVisitas" runat="server" OnClick="LinkButtonVisitas_Click" style="color: #FFFFFF" Visible="False">Administracion visitas</asp:LinkButton>
+                    </td>
                     <td style="color: #FFFFFF">
                         &nbsp;</td>
                     <td style="color: #FFFFFF">
@@ -70,7 +71,8 @@
                     <td>
                         &nbsp;</td>
                     <td>
-                        &nbsp;</td>
+                        <asp:LinkButton ID="LinkButtonCargos" runat="server" OnClick="LinkButton19_Click" style="color: #FFFFFF">Administrar cargos</asp:LinkButton>
+                    </td>
                     <td style="text-align: center">
                         <asp:LinkButton ID="LinkButton16" runat="server" ForeColor="White" OnClick="LinkButton16_Click">CERRAR SESIÓN</asp:LinkButton>
                     </td>

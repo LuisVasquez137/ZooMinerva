@@ -40,9 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Animal.cs" />
     <Compile Include="Configs.cs" />
     <Compile Include="Cuarentena.cs" />
+=======
+    <Compile Include="Configs.cs" />
+>>>>>>> origin/master
     <Compile Include="DataSetAnimal.cs">
       <DependentUpon>DataSetAnimal.xsd</DependentUpon>
     </Compile>
@@ -64,11 +68,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetEmpleado.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetNoticias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetNoticias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetZoologico.cs">
+      <DependentUpon>DataSetZoologico.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetZoologico.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetZoologico.xsd</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Dieta.cs" />
     <Compile Include="Donacion.cs" />
     <Compile Include="Empleado.cs" />
@@ -78,6 +91,9 @@
     <Compile Include="Ingrediente.cs" />
     <Compile Include="Origen.cs" />
     <Compile Include="Persona.cs" />
+=======
+    <Compile Include="Especie.cs" />
+>>>>>>> origin/master
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,6 +137,17 @@
     </None>
     <None Include="DataSetEmpleado.xss">
       <DependentUpon>DataSetEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetNoticias.xsc">
+      <DependentUpon>DataSetNoticias.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetNoticias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetNoticias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetNoticias.xss">
+      <DependentUpon>DataSetNoticias.xsd</DependentUpon>
     </None>
     <None Include="DataSetZoologico.xsc">
       <DependentUpon>DataSetZoologico.xsd</DependentUpon>

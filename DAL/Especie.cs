@@ -171,4 +171,8 @@ namespace DAL
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

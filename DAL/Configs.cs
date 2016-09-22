@@ -12,7 +12,11 @@ namespace DAL
         /// Campo para la cadena de conexion
         /// </summary>
 
+<<<<<<< HEAD
         public static string CadenaConexion = "Data Source=EDGAR_CAP\\SQLCAP;Initial Catalog=BDZoologicoMinerva;Integrated Security=True";
+=======
+        public static string CadenaConexion = "Data Source=WINDOWS-SFCQVL1;Initial Catalog=BDzoologicoMinerva;Integrated Security=True";
+>>>>>>> origin/master
 
         /// <summary>
         /// metodo para devolver resultados en operaciones CUD
@@ -27,4 +31,8 @@ namespace DAL
                 return false;
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

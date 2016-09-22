@@ -76,6 +76,7 @@ namespace ZOOMINERVA6 {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
+<<<<<<< HEAD
         /// Control btnExportar.
         /// </summary>
         /// <remarks>
@@ -85,6 +86,8 @@ namespace ZOOMINERVA6 {
         protected global::System.Web.UI.WebControls.Button btnExportar;
         
         /// <summary>
+=======
+>>>>>>> origin/master
         /// Control btnRefrescar.
         /// </summary>
         /// <remarks>

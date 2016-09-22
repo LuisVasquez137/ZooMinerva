@@ -6,7 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using BLL;
+<<<<<<< HEAD
 using GemBox.Spreadsheet;
+=======
+
+>>>>>>> origin/master
 
 namespace ZOOMINERVA6
 {
@@ -158,6 +162,7 @@ namespace ZOOMINERVA6
         }
         #endregion
 
+<<<<<<< HEAD
         protected void btnExportar_Click(object sender, EventArgs e)
         {
             SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
@@ -182,5 +187,31 @@ namespace ZOOMINERVA6
 
             ef.Save(ConfigsWP.almacenamiento + "Especies.xls");
         }
+=======
+        /*   protected void btnExportar_Click(object sender, EventArgs e)
+           {
+               SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+               ExcelFile ef = new ExcelFile();
+               ExcelWorksheet ws = ef.Worksheets.Add("Especies");
+
+               ws.Cells[0, 0].Value = "CODIGO:";
+               ws.Cells[0, 1].Value = "NOMBRE";
+               ws.Cells[0, 1].Value = "ESTADO";
+
+               DataTable reporte = new DataTable();
+               reporte = especie.Listar();
+
+               for (int i = 0; i <= reporte.Rows.Count; i++)
+               {
+                   ws.Cells[i, 0].Value = reporte.Columns[0].ToString();
+                   ws.Cells[i, 1].Value = reporte.Columns[1].ToString();
+                   ws.Cells[i, 2].Value = reporte.Columns[2].ToString();
+               }
+
+
+               ef.Save(ConfigsWP.almacenamiento + "Especies.xls");
+           }*/
+>>>>>>> origin/master
     }
 }
